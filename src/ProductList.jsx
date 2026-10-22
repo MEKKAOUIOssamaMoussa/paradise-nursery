@@ -92,18 +92,12 @@ const plantsArray = [
         description: 'Spring bulb with a rich, sweet fragrance.',
         cost: 22,
       },
-      {
-        name: 'Lemon Balm',
-        image: img('lemonbalm.jpg'),
-        description: 'Citrusy scent that relieves stress and promotes sleep.',
-        cost: 14,
-      },
     ],
   },
   {
-    category: 'Low Maintenance Plants',
+    category: 'Low Maintenance & Medicinal Plants',
     icon: '🪴',
-    blurb: 'Thrive on neglect — perfect for busy plant parents.',
+    blurb: 'Hardy and therapeutic houseplants for everyday wellness.',
     plants: [
       {
         name: 'ZZ Plant',
@@ -132,13 +126,13 @@ const plantsArray = [
       {
         name: 'Aloe Vera',
         image: img('aloe_vera.jpg'),
-        description: 'Requires little water and has soothing gel inside.',
+        description: 'Soothing medicinal gel inside and requires little water.',
         cost: 14,
       },
       {
         name: 'Purple Coneflower',
         image: img('echinacea.jpg'),
-        description: 'Drought-hardy bloomer that keeps flowering all summer.',
+        description: 'Traditional medicinal bloomer renowned for immune support.',
         cost: 16,
       },
     ],
@@ -321,7 +315,7 @@ function ProductList({ onHomeClick }) {
                           onClick={() => handleAddToCart(plant)}
                           disabled={isAdded}
                         >
-                          {isAdded ? '✓ Added to Cart' : 'Add to Cart'}
+                          {isAdded ? 'Added to Cart' : 'Add to Cart'}
                         </button>
                       </div>
                     </article>

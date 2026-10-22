@@ -37,7 +37,7 @@ const CartItem = ({ onContinueShopping }) => {
 
   const handleCheckoutShopping = () => {
     setCheckoutMessage(true);
-    alert('Coming Soon! Checkout functionality will be added in a future update.');
+    alert('Functionality to be added for future reference - Coming Soon!');
   };
 
   const handleIncrement = (item) => {

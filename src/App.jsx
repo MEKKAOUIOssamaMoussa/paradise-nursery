@@ -30,7 +30,7 @@ function App() {
             <div className="landing-hero">
               <span className="landing-eyebrow">🌿 Houseplants delivered with love</span>
               <h1 className="landing-title">
-                Welcome to <span>Paradise Nursery</span>
+                Welcome To <span>Paradise Nursery</span>
               </h1>
               <div className="landing-divider" aria-hidden="true"></div>
               <p className="landing-tagline">Where Green Meets Serenity</p>

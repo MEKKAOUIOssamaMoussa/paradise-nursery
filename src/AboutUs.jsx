@@ -4,7 +4,7 @@ import './AboutUs.css';
 /** Short company story shown on the Paradise Nursery landing page. */
 function AboutUs() {
   return (
-    <section className="about-us" id="about-us" aria-labelledby="about-us-heading">
+    <div className="about-us-container about-us" id="about-us" aria-labelledby="about-us-heading">
       <h2 id="about-us-heading" className="about-us__title">
         About Paradise Nursery
       </h2>
@@ -14,11 +14,16 @@ function AboutUs() {
       </p>
 
       <p className="about-us__text">
-        At Paradise Nursery, we are passionate about bringing nature closer to you. Our
-        mission is to provide a wide range of high-quality houseplants that not only
-        enhance the beauty of your surroundings but also contribute to a healthier and
-        more sustainable lifestyle. From air-purifying plants to aromatic fragrant ones,
-        we have something for every plant enthusiast.
+        At Paradise Nursery, our mission is to provide high-quality houseplants—including
+        air-purifying, aromatic, and medicinal selections—that effortlessly bring nature
+        indoors. We believe that living among vibrant greenery promotes tranquility, wellness,
+        and everyday serenity in your home or workplace.
+      </p>
+
+      <p className="about-us__text">
+        Whether you are seeking low-maintenance succulents, soothing fragrant herbs, or lush
+        air-filtering greenery, our curated collection is grown with utmost care and delivered
+        straight to your doorstep.
       </p>
 
       <p className="about-us__text">
@@ -48,7 +53,7 @@ function AboutUs() {
           <span>Healthy guarantee</span>
         </li>
       </ul>
-    </section>
+    </div>
   );
 }
 

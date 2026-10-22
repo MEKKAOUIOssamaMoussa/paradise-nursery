@@ -15,12 +15,21 @@ const CartItem = ({ onContinueShopping }) => {
   // Total number of plants in the cart.
   const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
 
+  // Helper to safely parse costs whether provided as numbers (15) or strings ('$15')
+  const parseCost = (cost) => {
+    if (typeof cost === 'number') return cost;
+    return parseFloat(String(cost).replace(/[^0-9.-]+/g, '')) || 0;
+  };
+
   // Calculate total amount for all products in the cart.
   const calculateTotalAmount = () =>
-    cart.reduce((total, item) => total + item.cost * item.quantity, 0).toFixed(2);
+    cart
+      .reduce((total, item) => total + parseCost(item.cost) * item.quantity, 0)
+      .toFixed(2);
 
   // Calculate the total cost for a single plant type (unit price x quantity).
-  const calculateTotalCost = (item) => (item.cost * item.quantity).toFixed(2);
+  const calculateTotalCost = (item) =>
+    (parseCost(item.cost) * item.quantity).toFixed(2);
 
   const handleContinueShopping = (e) => {
     onContinueShopping(e);
@@ -87,7 +96,7 @@ const CartItem = ({ onContinueShopping }) => {
               <div className="cart-item-details">
                 <h2 className="cart-item-name">{item.name}</h2>
                 <p className="cart-item-cost">
-                  Unit price: <strong>${item.cost.toFixed(2)}</strong>
+                  Unit price: <strong>${parseCost(item.cost).toFixed(2)}</strong>
                 </p>
 
                 <div className="cart-item-quantity" aria-label={`Quantity of ${item.name}`}>
